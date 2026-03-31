@@ -1,9 +1,8 @@
+name: tanawat-resume
 version: '3.8'
 services:
   web:
     build: .
     ports:
       - "2535:80"
-    volumes:
-      - .:/usr/share/nginx/html
     restart: unless-stopped
