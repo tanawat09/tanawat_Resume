@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>นายธนวัตน์ น้อยพาลี - IT Professional Resume</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <span class="logo-icon"><i class="fas fa-terminal"></i></span>
+            <span>Tanawat<span class="logo-dot">.</span></span>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero" class="active">หน้าแรก</a></li>
+            <li><a href="#about">เกี่ยวกับ</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#experience">ประสบการณ์</a></li>
+            <li><a href="#education">การศึกษา</a></li>
+            <li><a href="#certificates">ใบประกาศ</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="greeting">
+                    <span class="wave">👋</span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="first-name">นายธนวัตน์</span>
+                    <span class="last-name">น้อยพาลี</span>
+                </h1>
+                <div class="hero-titles">
+                    <div class="title-carousel" id="titleCarousel">
+                        <span>Network Administrator</span>
+                        <span>Programmer</span>
+                        <span>IT Support Specialist</span>
+                        <span>System Administrator</span>
+                        <span>Database Admin</span>
+                    </div>
+                </div>
+                <p class="hero-desc">ผู้เชี่ยวชาญด้าน IT มากกว่า 8 ปี ทั้งด้าน Network Administration, Programming และ
+                    System Infrastructure</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> ติดต่อผม
+                    </a>
+                    <a href="#experience" class="btn btn-outline">
+                        <i class="fas fa-briefcase"></i> ดูประสบการณ์
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="6">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">ปีประสบการณ์</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="9">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Firewall Sites</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="365">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">กล้อง CCTV</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="3">0</span>
+                        <span class="stat-plus"></span>
+                        <span class="stat-label">ISO Certified</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <div class="image-bg-circle"></div>
+                    <div class="image-bg-circle circle-2"></div>
+                    <div class="image-frame">
+                        <img src="S__15048734.jpg" alt="นายธนวัตน์  น้อยพาลี">
+                    </div>
+                    <div class="floating-badges">
+                        <div class="badge badge-1"><i class="fas fa-shield-halved"></i> Cybersecurity</div>
+                        <div class="badge badge-2"><i class="fas fa-network-wired"></i> Network</div>
+                        <div class="badge badge-3"><i class="fas fa-database"></i> Database</div>
+                        <div class="badge badge-4"><i class="fas fa-code"></i> Developer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>เลื่อนลง</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-user"></i></span>
+                <span>เกี่ยวกับผม</span>
+                <div class="title-line"></div>
+            </h2>
+            <div class="about-grid">
+                <div class="about-card card reveal">
+                    <div class="card-accent"></div>
+                    <div class="about-icon"><i class="fas fa-id-card"></i></div>
+                    <h3>ข้อมูลส่วนตัว</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <div>
+                                <span class="info-label">วันเกิด</span>
+                                <span class="info-value">9 ธันวาคม 2535</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-flag"></i>
+                            <div>
+                                <span class="info-label">สัญชาติ</span>
+                                <span class="info-value">ไทย</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-venus-mars"></i>
+                            <div>
+                                <span class="info-label">เพศ</span>
+                                <span class="info-value">ชาย</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <span class="info-label">สถานภาพ</span>
+                                <span class="info-value">โสด</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-shield"></i>
+                            <div>
+                                <span class="info-label">ทหาร</span>
+                                <span class="info-value">ได้รับการยกเว้น (ร.ด.)</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <span class="info-label">ขับขี่</span>
+                                <span class="info-value">รถยนต์ และ รถจักรยานยนต์</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card card reveal">
+                    <div class="card-accent accent-2"></div>
+                    <div class="about-icon icon-2"><i class="fas fa-crosshairs"></i></div>
+                    <h3>ตำแหน่งที่ต้องการ</h3>
+                    <div class="looking-for">
+                        <div class="position-tag"><i class="fas fa-code"></i> โปรแกรมเมอร์</div>
+                        <div class="position-tag tag-2"><i class="fas fa-headset"></i> IT Support</div>
+                        <div class="position-tag tag-3"><i class="fas fa-network-wired"></i> Network</div>
+                    </div>
+                    <div class="salary-section">
+                        <div class="salary-header">
+                            <span>เงินเดือนที่ต้องการ</span>
+                            <strong>27,000 - 35,000 บาท</strong>
+                        </div>
+                        <div class="salary-bar">
+                            <div class="salary-fill"></div>
+                        </div>
+                    </div>
+                    <div class="info-badges">
+                        <div class="info-badge">
+                            <i class="fas fa-briefcase"></i> ประจำ (Full-time)
+                        </div>
+                        <div class="info-badge">
+                            <i class="fas fa-clock"></i> เริ่มงานได้ใน 1 เดือน
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card card full-width reveal">
+                    <div class="card-accent accent-3"></div>
+                    <div class="about-icon icon-3"><i class="fas fa-language"></i></div>
+                    <h3>ภาษา</h3>
+                    <div class="language-bars">
+                        <div class="lang-item">
+                            <div class="lang-header">
+                                <span class="lang-name">🇹🇭 ภาษาไทย</span>
+                                <span class="lang-level">เจ้าของภาษา</span>
+                            </div>
+                            <div class="lang-bar">
+                                <div class="lang-fill" data-width="100"></div>
+                            </div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-header">
+                                <span class="lang-name">🇬🇧 ภาษาอังกฤษ</span>
+                                <span class="lang-level level-fair">พอใช้</span>
+                            </div>
+                            <div class="lang-bar">
+                                <div class="lang-fill fill-2" data-width="45"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon icon-skills"><i class="fas fa-laptop-code"></i></span>
+                <span>ทักษะความสามารถ</span>
+                <div class="title-line"></div>
+            </h2>
+            <div class="skills-tabs">
+                <button class="tab-btn active" data-tab="network"><i class="fas fa-network-wired"></i>
+                    เครือข่าย</button>
+                <button class="tab-btn" data-tab="server"><i class="fas fa-server"></i> เซิร์ฟเวอร์</button>
+                <button class="tab-btn" data-tab="dev"><i class="fas fa-code"></i> พัฒนา</button>
+                <button class="tab-btn" data-tab="db"><i class="fas fa-database"></i> ฐานข้อมูล</button>
+                <button class="tab-btn" data-tab="tools"><i class="fas fa-tools"></i> เครื่องมือ</button>
+            </div>
+            <div class="skills-content">
+                <!-- Network Tab -->
+                <div class="skill-panel active" id="tab-network">
+                    <div class="skill-cards-grid">
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-fire-flame-curved"></i></div>
+                            <h4>FortiGate Firewall</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
+                            <h4>Network Admin</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-wifi"></i></div>
+                            <h4>LAN / WAN</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-tower-broadcast"></i></div>
+                            <h4>Cisco Aironet</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-video"></i></div>
+                            <h4>ระบบ CCTV</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-lock"></i></div>
+                            <h4>Cybersecurity</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Server Tab -->
+                <div class="skill-panel" id="tab-server">
+                    <div class="skill-cards-grid">
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fab fa-windows"></i></div>
+                            <h4>Windows Server</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fab fa-linux"></i></div>
+                            <h4>Linux Server</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                            <h4>Docker</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                            <h4>FTP / Cloud</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-print"></i></div>
+                            <h4>Print Server</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                            <h4>IoT Systems</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dev Tab -->
+                <div class="skill-panel" id="tab-dev">
+                    <div class="skill-cards-grid">
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <h4>Python</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fab fa-php"></i></div>
+                            <h4>PHP</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <h4>Visual Studio .NET</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fab fa-line"></i></div>
+                            <h4>LINE Bot</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                            <h4>Raspberry Pi</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 65%"></div>
+                            </div>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- DB Tab -->
+                <div class="skill-panel" id="tab-db">
+                    <div class="skill-cards-grid">
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-gem"></i></div>
+                            <h4>Oracle NetSuite ERP</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h4>MySQL</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h4>SQL Server</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Grafana</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-industry"></i></div>
+                            <h4>McFrame ERP</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools Tab -->
+                <div class="skill-panel" id="tab-tools">
+                    <div class="skill-cards-grid">
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+                            <h4>Microsoft 365</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                            <h4>Adobe Photoshop</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-camera"></i></div>
+                            <h4>Adobe Lightroom</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-server"></i></div>
+                            <h4>VMware</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card card reveal">
+                            <div class="skill-icon"><i class="fas fa-temperature-half"></i></div>
+                            <h4>Farm Online Skov</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ISO Badges -->
+            <div class="iso-section reveal">
+                <h3><i class="fas fa-certificate"></i> มาตรฐานที่เกี่ยวข้อง</h3>
+                <div class="iso-badges">
+                    <div class="iso-badge"><i class="fas fa-check-circle"></i> ISO 9001</div>
+                    <div class="iso-badge"><i class="fas fa-check-circle"></i> ISO 45001</div>
+                    <div class="iso-badge"><i class="fas fa-check-circle"></i> ISO 27001</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon icon-exp"><i class="fas fa-briefcase"></i></span>
+                <span>ประสบการณ์ทำงาน</span>
+                <div class="title-line"></div>
+            </h2>
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker current">
+                        <div class="marker-pulse"></div>
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="timeline-content card">
+                        <div class="timeline-badge">ปัจจุบัน</div>
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> พฤศจิกายน 2563 - ปัจจุบัน
+                        </div>
+                        <h3 class="timeline-title">Network Administrator/ โปรแกรมเมอร์ / IT Support</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> บริษัท ชูวิทย์ฟาร์ม (2019) จำกัด (มหาชน)
+                        </h4>
+                        <p class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i> 723 ถ. โชคชัย - เดชอุดม ต.นางรอง อำเภอนางรอง บุรีรัมย์
+                            31110
+                        </p>
+                        <div class="timeline-salary">
+                            <i class="fas fa-money-bill-wave"></i> 29,000 บาท
+                        </div>
+                        <div class="timeline-responsibilities">
+                            <h5><i class="fas fa-tasks"></i> หน้าที่ความรับผิดชอบ</h5>
+                            <div class="resp-tags">
+                                <span class="resp-tag"><i class="fas fa-globe"></i> ERP Oracle NetSuite</span>
+                                <span class="resp-tag"><i class="fas fa-shield-halved"></i> Network Administrator</span>
+                                <span class="resp-tag"><i class="fas fa-code"></i> Programming Support</span>
+                                <span class="resp-tag"><i class="fas fa-fire"></i> Firewall Admin (FortiGate) - 9
+                                    Sites</span>
+                                <span class="resp-tag"><i class="fab fa-microsoft"></i> MS 365 Admin</span>
+                                <span class="resp-tag"><i class="fas fa-database"></i> Database Admin</span>
+                                <span class="resp-tag"><i class="fab fa-windows"></i> Windows Server</span>
+                                <span class="resp-tag"><i class="fab fa-linux"></i> Linux Server</span>
+                                <span class="resp-tag"><i class="fas fa-chart-bar"></i> Report Grafana</span>
+                                <span class="resp-tag"><i class="fab fa-docker"></i> Docker</span>
+                                <span class="resp-tag"><i class="fas fa-temperature-half"></i> Farm Online Skov,
+                                    Temp-view</span>
+                                <span class="resp-tag"><i class="fas fa-video"></i> CCTV Admin (365 ตัว)</span>
+                                <span class="resp-tag"><i class="fas fa-microchip"></i> IoT</span>
+                                <span class="resp-tag"><i class="fas fa-certificate"></i> ISO 9001 / 45001 /
+                                    27001</span>
+                                <span class="resp-tag"><i class="fas fa-fingerprint"></i> Finger Scan</span>
+                                <span class="resp-tag"><i class="fas fa-users"></i> Business Plus Payroll</span>
+                                <span class="resp-tag"><i class="fas fa-clock"></i> Time Attendance</span>
+                                <span class="resp-tag"><i class="fas fa-print"></i> Print Server</span>
+                                <span class="resp-tag"><i class="fas fa-fax"></i> ดูแลเครื่อง Fax</span>
+                                <span class="resp-tag"><i class="fas fa-wifi"></i> Cisco Aironet (AIR-AP1542)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="timeline-content card">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> เมษายน 2562 - ตุลาคม 2563
+                        </div>
+                        <h3 class="timeline-title">โปรแกรมเมอร์ / IT Support</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> Seika YKC Circuit Thailand Co., Ltd
+                            <span class="company-note">*ปิดกิจการ</span>
+                        </h4>
+                        <p class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i> เขตนิคมอุตสาหกรรม 304 จ.ปราจีนบุรี
+                        </p>
+                        <div class="timeline-salary">
+                            <i class="fas fa-money-bill-wave"></i> 24,000 บาท
+                        </div>
+                        <div class="timeline-responsibilities">
+                            <h5><i class="fas fa-tasks"></i> หน้าที่ความรับผิดชอบ</h5>
+                            <div class="resp-tags">
+                                <span class="resp-tag"><i class="fas fa-globe"></i> ERP System Admin</span>
+                                <span class="resp-tag"><i class="fas fa-desktop"></i> ดูแลคอมพิวเตอร์ /
+                                    เครื่องพิมพ์</span>
+                                <span class="resp-tag"><i class="fas fa-network-wired"></i> Network Administrator</span>
+                                <span class="resp-tag"><i class="fab fa-windows"></i> Windows Server</span>
+                                <span class="resp-tag"><i class="fas fa-database"></i> Database Admin</span>
+                                <span class="resp-tag"><i class="fas fa-shield-halved"></i> Firewall (FortiGATE)</span>
+                                <span class="resp-tag"><i class="fas fa-cloud"></i> FTP / Cloud System</span>
+                                <span class="resp-tag"><i class="fas fa-print"></i> เครื่องพิมพ์ Canon</span>
+                                <span class="resp-tag"><i class="fas fa-wifi"></i> Network Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="timeline-content card">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> ก่อนหน้านี้
+                        </div>
+                        <h3 class="timeline-title">Supervisor / โปรแกรมเมอร์</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> Yano Electronics (Thailand) Co., Ltd
+                        </h4>
+                        <p class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i> เขตนิคมอุตสาหกรรม 304
+                        </p>
+                        <div class="timeline-salary">
+                            <i class="fas fa-money-bill-wave"></i> 17,000 บาท
+                        </div>
+                        <div class="timeline-responsibilities">
+                            <h5><i class="fas fa-tasks"></i> หน้าที่ความรับผิดชอบ</h5>
+                            <div class="resp-tags">
+                                <span class="resp-tag"><i class="fas fa-code"></i> พัฒนาโปรแกรม</span>
+                                <span class="resp-tag"><i class="fas fa-headset"></i> IT Support</span>
+                                <span class="resp-tag"><i class="fab fa-microsoft"></i> MS Office, Excel, Access</span>
+                                <span class="resp-tag"><i class="fas fa-palette"></i> Adobe Photoshop & Lightroom</span>
+                                <span class="resp-tag"><i class="fas fa-code-branch"></i> Visual Studio .NET, Python,
+                                    PHP</span>
+                                <span class="resp-tag"><i class="fas fa-wrench"></i> แก้ไขปัญหา Hardware</span>
+                                <span class="resp-tag"><i class="fas fa-network-wired"></i> ติดตั้ง LAN/WAN</span>
+                                <span class="resp-tag"><i class="fas fa-server"></i> Server: Windows, Linux, MySQL,
+                                    VMware</span>
+                                <span class="resp-tag"><i class="fas fa-video"></i> CCTV & Finger Scan</span>
+                            </div>
+                        </div>
+                        <div class="projects-section">
+                            <h5><i class="fas fa-project-diagram"></i> โปรเจกต์ที่พัฒนา</h5>
+                            <div class="project-list">
+                                <div class="project-item"><i class="fas fa-check-circle"></i> Costing Program</div>
+                                <div class="project-item"><i class="fas fa-check-circle"></i> ระบบตรวจนับสินค้า</div>
+                                <div class="project-item"><i class="fas fa-check-circle"></i> ระบบตรวจ Mold Die</div>
+                                <div class="project-item"><i class="fas fa-check-circle"></i> Training Record Program
+                                </div>
+                                <div class="project-item"><i class="fas fa-check-circle"></i> MT Service Program</div>
+                                <div class="project-item"><i class="fas fa-check-circle"></i> IT Service Program</div>
+                                <div class="project-item"><i class="fas fa-check-circle"></i> Account Payment System
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 4 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="timeline-content card">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i> มกราคม 2560 - เมษายน 2560
+                        </div>
+                        <h3 class="timeline-title">โปรแกรมเมอร์ / IT Support</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-hospital"></i> โรงพยาบาลนางรอง
+                        </h4>
+                        <p class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i> 692 ถ. โชคชัย - เดชอุดม ตำบล นางรอง อำเภอนางรอง
+                            บุรีรัมย์ 31110
+                        </p>
+                        <div class="timeline-responsibilities">
+                            <h5><i class="fas fa-tasks"></i> หน้าที่ความรับผิดชอบ</h5>
+                            <div class="resp-tags">
+                                <span class="resp-tag"><i class="fas fa-code"></i> เขียนโปรแกรม</span>
+                                <span class="resp-tag"><i class="fas fa-headset"></i> IT Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon icon-edu"><i class="fas fa-graduation-cap"></i></span>
+                <span>การศึกษา</span>
+                <div class="title-line"></div>
+            </h2>
+            <div class="education-card card reveal">
+                <div class="edu-left">
+                    <div class="edu-icon-large">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="gpa-circle">
+                        <svg viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="gpaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#667eea" />
+                                    <stop offset="100%" style="stop-color:#764ba2" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="50" r="42" class="gpa-bg"></circle>
+                            <circle cx="50" cy="50" r="42" class="gpa-fill" data-gpa="2.46"></circle>
+                        </svg>
+                        <div class="gpa-text">
+                            <span class="gpa-number">2.46</span>
+                            <span class="gpa-label">GPA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu-right">
+                    <div class="edu-badge">ปริญญาตรี</div>
+                    <h3 class="edu-school">มหาวิทยาลัยราชภัฏบุรีรัมย์</h3>
+                    <div class="edu-details">
+                        <div class="edu-detail">
+                            <i class="fas fa-flask"></i>
+                            <span>คณะวิทยาศาสตร์</span>
+                        </div>
+                        <div class="edu-detail">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>สาขาวิทยาการคอมพิวเตอร์</span>
+                        </div>
+                        <div class="edu-detail">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>สำเร็จการศึกษา ปี 2560</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section" id="certificates">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon icon-cert"><i class="fas fa-award"></i></span>
+                <span>ใบประกาศนียบัตร & อบรม</span>
+                <div class="title-line"></div>
+            </h2>
+            <div class="cert-grid">
+                <div class="cert-card card reveal">
+                    <div class="cert-ribbon">ล่าสุด</div>
+                    <div class="cert-icon-wrap">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Basic Cybersecurity</h3>
+                    <span class="cert-type">วุฒิบัตร</span>
+                    <p class="cert-date"><i class="fas fa-calendar"></i> มกราคม 2568 - ปัจจุบัน</p>
+                </div>
+                <div class="cert-card card reveal">
+                    <div class="cert-icon-wrap oracle">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Oracle Workshop Program</h3>
+                    <span class="cert-type">หลักสูตรอบรม</span>
+                    <p class="cert-date"><i class="fas fa-calendar"></i> พฤศจิกายน 2560</p>
+                    <p class="cert-org"><i class="fas fa-building"></i> Oracle</p>
+                </div>
+                <div class="cert-card card reveal">
+                    <div class="cert-icon-wrap network">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Basic Network</h3>
+                    <span class="cert-type">หลักสูตรอบรม</span>
+                    <p class="cert-org"><i class="fas fa-building"></i> กรมพัฒนาฝีมือแรงงาน</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon icon-contact"><i class="fas fa-paper-plane"></i></span>
+                <span>ติดต่อ</span>
+                <div class="title-line"></div>
+            </h2>
+            <p class="contact-subtitle">สนใจร่วมงานหรือมีคำถาม สามารถติดต่อได้เลยครับ</p>
+            <div class="contact-grid">
+                <a href="https://tanawat.noipalee.com/" target="_blank" class="contact-card card reveal">
+                    <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                    <h3>เว็บไซต์</h3>
+                    <p>tanawat.noipalee.com</p>
+                </a>
+                <a href="mailto:contact@tanawat.noipalee.com" class="contact-card card reveal">
+                    <div class="contact-icon icon-email"><i class="fas fa-envelope"></i></div>
+                    <h3>อีเมล</h3>
+                    <p>ติดต่อผ่านเว็บไซต์</p>
+                </a>
+                <div class="contact-card card reveal">
+                    <div class="contact-icon icon-location"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>ที่อยู่</h3>
+                    <p>กรุงเทพมหานคร, ประเทศไทย</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-terminal"></i> ธนวัตน์ น้อยพาลี
+                </div>
+                <p>IT Professional | Network Admin | Programmer</p>
+                <div class="footer-line"></div>
+                <p class="footer-copy">&copy; 2026 Tanawat Noipalee. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
