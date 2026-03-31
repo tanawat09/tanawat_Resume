@@ -10,18 +10,18 @@
   />
   <style>
     :root {
-      --bg: #07111f;
-      --bg-2: #0d1f33;
-      --surface: rgba(10, 18, 32, 0.68);
-      --card: rgba(255, 255, 255, 0.08);
-      --line: rgba(255, 255, 255, 0.12);
-      --text: #ecf4ff;
-      --muted: #98a8c7;
-      --primary: #47c7ff;
-      --secondary: #6df7c1;
-      --accent: #ffb85c;
-      --glow: 0 20px 60px rgba(8, 160, 255, 0.16);
-      --shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+      --bg: #f8fbff;
+      --bg-2: #e0f0ff;
+      --surface: rgba(255, 255, 255, 0.85);
+      --card: #ffffff;
+      --line: rgba(0, 0, 0, 0.08);
+      --text: #1a2c42;
+      --muted: #5c728a;
+      --primary: #0084ff;
+      --secondary: #00d2aa;
+      --accent: #ff8c00;
+      --glow: 0 20px 50px rgba(0, 132, 255, 0.15);
+      --shadow: 0 16px 40px rgba(0, 20, 50, 0.06);
       --radius-xl: 32px;
       --radius-lg: 24px;
       --radius-md: 18px;
@@ -43,10 +43,10 @@
       font-family: "Trebuchet MS", "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(71, 199, 255, 0.22), transparent 34%),
-        radial-gradient(circle at top right, rgba(109, 247, 193, 0.14), transparent 30%),
-        radial-gradient(circle at 60% 80%, rgba(255, 184, 92, 0.12), transparent 28%),
-        linear-gradient(145deg, var(--bg) 0%, #091827 45%, var(--bg-2) 100%);
+        radial-gradient(circle at top left, rgba(0, 132, 255, 0.06), transparent 34%),
+        radial-gradient(circle at top right, rgba(0, 210, 170, 0.06), transparent 30%),
+        radial-gradient(circle at 60% 80%, rgba(255, 140, 0, 0.06), transparent 28%),
+        linear-gradient(145deg, var(--bg) 0%, #edf3fa 45%, var(--bg-2) 100%);
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -59,7 +59,7 @@
       height: 34rem;
       border-radius: 50%;
       filter: blur(40px);
-      opacity: 0.24;
+      opacity: 0.15;
       z-index: -1;
       animation: blobShift 14s ease-in-out infinite;
     }
@@ -92,8 +92,8 @@
       top: 0;
       z-index: 1000;
       backdrop-filter: blur(18px);
-      background: rgba(7, 17, 31, 0.62);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.75);
+      border-bottom: 1px solid var(--line);
     }
 
     .nav-inner {
@@ -118,9 +118,10 @@
       display: grid;
       place-items: center;
       border-radius: 16px;
-      background: linear-gradient(135deg, rgba(71, 199, 255, 0.22), rgba(109, 247, 193, 0.18));
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: linear-gradient(135deg, rgba(0, 132, 255, 0.1), rgba(0, 210, 170, 0.1));
+      border: 1px solid rgba(0, 132, 255, 0.15);
       box-shadow: var(--glow);
+      color: var(--primary);
     }
 
     .nav-links {
@@ -134,6 +135,7 @@
       position: relative;
       padding-bottom: 0.2rem;
       transition: color 0.25s ease;
+      font-weight: 500;
     }
 
     .nav-links a::after {
@@ -199,10 +201,12 @@
       gap: 0.55rem;
       padding: 0.55rem 0.95rem;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: rgba(255, 255, 255, 0.06);
-      color: #d7f8ff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      background: rgba(255, 255, 255, 0.6);
+      color: var(--primary);
       font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
 
     .dot {
@@ -210,7 +214,7 @@
       height: 0.55rem;
       border-radius: 999px;
       background: var(--secondary);
-      box-shadow: 0 0 16px rgba(109, 247, 193, 0.8);
+      box-shadow: 0 0 12px rgba(0, 196, 154, 0.6);
     }
 
     .avatar-shell {
@@ -221,7 +225,7 @@
       padding: 0.45rem;
       background: conic-gradient(from 180deg, var(--primary), var(--secondary), var(--accent), var(--primary));
       animation: spin 14s linear infinite;
-      box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.02), var(--glow);
+      box-shadow: 0 0 0 8px rgba(0, 132, 255, 0.04), var(--glow);
     }
 
     .avatar {
@@ -229,7 +233,7 @@
       height: 100%;
       border-radius: 50%;
       overflow: hidden;
-      background: linear-gradient(145deg, #08121f, #13253d);
+      background: #fff;
     }
 
     .avatar img {
@@ -244,6 +248,7 @@
       font-size: 1.75rem;
       margin-bottom: 0.55rem;
       text-align: center;
+      color: var(--text);
     }
 
     .role {
@@ -251,6 +256,7 @@
       color: var(--muted);
       max-width: 18rem;
       margin: 0 auto 1.5rem;
+      font-weight: 500;
     }
 
     .mini-stats {
@@ -265,8 +271,8 @@
     .focus-item {
       padding: 1rem;
       border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid var(--line);
     }
 
     .stat {
@@ -276,13 +282,15 @@
     .stat strong,
     .hero-info strong {
       display: block;
-      color: #fff;
+      color: var(--primary);
+      font-size: 1.1rem;
     }
 
     .stat span,
     .hero-info span {
       color: var(--muted);
       font-size: 0.82rem;
+      font-weight: 500;
     }
 
     .hero-panel h2 {
@@ -290,11 +298,12 @@
       font-size: clamp(2.1rem, 4vw, 4.4rem);
       line-height: 1.05;
       max-width: 12ch;
+      color: var(--text);
     }
 
     .gradient-text {
       display: block;
-      background: linear-gradient(90deg, #f7fbff, #9fe8ff 42%, #9ff8df 90%);
+      background: linear-gradient(90deg, #0055ff, #00d2aa 60%, #ff8c00 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -303,7 +312,8 @@
     .hero-summary {
       margin-top: 1.2rem;
       max-width: 48rem;
-      color: #d1ddf3;
+      color: #435467;
+      font-size: 1.05rem;
     }
 
     .hero-actions {
@@ -320,22 +330,25 @@
       padding: 0.95rem 1.2rem;
       border-radius: 999px;
       font-weight: 700;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .btn:hover {
       transform: translateY(-2px);
+      box-shadow: var(--shadow);
     }
 
     .btn-primary {
-      color: #04131f;
-      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       box-shadow: var(--glow);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.6);
     }
 
     .hero-gridline,
@@ -367,12 +380,14 @@
       text-transform: uppercase;
       letter-spacing: 0.18em;
       font-size: 0.78rem;
-      color: var(--secondary);
+      color: var(--primary);
       margin-bottom: 0.35rem;
+      font-weight: 700;
     }
 
     .section-heading h3 {
       font-size: clamp(1.55rem, 3vw, 2.4rem);
+      color: var(--text);
     }
 
     .section-heading p {
@@ -389,9 +404,13 @@
       border-radius: var(--radius-lg);
     }
 
+    .about-copy p {
+      color: #3b4b5e;
+      font-size: 1.02rem;
+    }
+
     .about-copy p + p {
       margin-top: 1rem;
-      color: #d5e1f6;
     }
 
     .focus-list {
@@ -402,7 +421,8 @@
     .focus-item strong {
       display: block;
       margin-bottom: 0.3rem;
-      color: #fff;
+      color: var(--text);
+      font-size: 1.05rem;
     }
 
     .timeline {
@@ -418,12 +438,13 @@
       top: 0.5rem;
       bottom: 0.5rem;
       width: 2px;
-      background: linear-gradient(var(--primary), rgba(109, 247, 193, 0.2));
+      background: linear-gradient(var(--primary), rgba(0, 196, 154, 0.2));
     }
 
     .job {
       position: relative;
       margin-left: 2.4rem;
+      border: 1px solid var(--line);
     }
 
     .job::before {
@@ -435,7 +456,7 @@
       height: 0.95rem;
       border-radius: 50%;
       background: radial-gradient(circle, #fff 0 25%, var(--primary) 26% 100%);
-      box-shadow: 0 0 0 8px rgba(71, 199, 255, 0.08);
+      box-shadow: 0 0 0 6px rgba(0, 119, 255, 0.15);
     }
 
     .job-head {
@@ -448,15 +469,18 @@
 
     .job-head h4 {
       font-size: 1.15rem;
+      color: var(--text);
     }
 
     .job-head .period {
-      color: #d5f5ff;
+      color: var(--primary);
       padding: 0.35rem 0.8rem;
       border-radius: 999px;
-      background: rgba(71, 199, 255, 0.12);
-      border: 1px solid rgba(71, 199, 255, 0.2);
+      background: rgba(0, 119, 255, 0.08);
+      border: 1px solid rgba(0, 119, 255, 0.15);
       white-space: nowrap;
+      font-weight: 600;
+      font-size: 0.9rem;
     }
 
     .job .title {
@@ -467,7 +491,7 @@
 
     .job ul {
       padding-left: 1.2rem;
-      color: #dbe7fb;
+      color: #435467;
     }
 
     .job li + li {
@@ -489,15 +513,19 @@
       gap: 1rem;
       margin-bottom: 0.5rem;
       font-weight: 700;
-      color: #f5fbff;
+      color: var(--text);
+    }
+
+    .skill-meta span:last-child {
+      color: var(--primary);
     }
 
     .skill-bar {
       height: 0.9rem;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.05);
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.04);
+      border: 1px inset rgba(0, 0, 0, 0.02);
     }
 
     .skill-fill {
@@ -515,6 +543,7 @@
       place-items: center;
       position: relative;
       overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
     }
 
     .core {
@@ -526,17 +555,19 @@
       place-items: center;
       text-align: center;
       font-weight: 800;
-      background: linear-gradient(135deg, rgba(71, 199, 255, 0.28), rgba(109, 247, 193, 0.2));
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text);
+      background: linear-gradient(135deg, rgba(0, 119, 255, 0.1), rgba(0, 196, 154, 0.1));
+      border: 1px solid rgba(0, 119, 255, 0.2);
       box-shadow: var(--glow);
       z-index: 2;
+      backdrop-filter: blur(8px);
     }
 
     .ring {
       position: absolute;
       border-radius: 50%;
-      border: 1px dashed rgba(255, 255, 255, 0.1);
-      animation: spin 18s linear infinite;
+      border: 1px dashed rgba(0, 119, 255, 0.2);
+      animation: spin 24s linear infinite;
     }
 
     .ring.one { width: 18rem; height: 18rem; }
@@ -546,12 +577,14 @@
       position: absolute;
       padding: 0.7rem 0.95rem;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: var(--glow);
-      color: #f5fbff;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      color: var(--primary);
       font-weight: 700;
       transform: translate(-50%, -50%);
+      z-index: 3;
+      font-size: 0.9rem;
     }
 
     .project-grid {
@@ -562,6 +595,7 @@
       position: relative;
       overflow: hidden;
       min-height: 100%;
+      background: #ffffff;
     }
 
     .project-card::before {
@@ -575,10 +609,13 @@
     .project-card h4 {
       margin-bottom: 0.8rem;
       font-size: 1.12rem;
+      color: var(--text);
     }
 
     .project-card p {
-      color: #d3ddf0;
+      color: #5e7085;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     .tags {
@@ -591,10 +628,11 @@
     .tag {
       padding: 0.45rem 0.75rem;
       border-radius: 999px;
-      font-size: 0.84rem;
-      color: #dbfafe;
-      background: rgba(71, 199, 255, 0.1);
-      border: 1px solid rgba(71, 199, 255, 0.18);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: rgba(0, 119, 255, 0.08);
+      border: 1px solid rgba(0, 119, 255, 0.15);
     }
 
     .contact-grid {
@@ -607,12 +645,20 @@
       letter-spacing: 0.12em;
       font-size: 0.76rem;
       margin-bottom: 0.45rem;
+      font-weight: 700;
     }
 
     .contact-card strong,
     .contact-card a {
       font-size: 1.05rem;
       word-break: break-word;
+      color: var(--primary);
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .contact-card a:hover {
+      color: var(--accent);
     }
 
     .footer {
@@ -631,9 +677,16 @@
       place-items: center;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #05131d;
+      color: #fff;
       font-weight: 900;
-      box-shadow: var(--shadow);
+      box-shadow: var(--glow);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      z-index: 50;
+      transition: transform 0.2s;
+    }
+
+    .to-top:hover {
+      transform: translateY(-3px) scale(1.05);
     }
 
     .reveal {
@@ -669,7 +722,6 @@
       .hero-gridline {
         grid-template-columns: 1fr;
       }
-
       .job-head {
         flex-direction: column;
       }
@@ -680,25 +732,20 @@
         flex-direction: column;
         align-items: flex-start;
       }
-
       .hero {
         padding-top: 2.5rem;
       }
-
       .hero-panel,
       .profile-panel,
       .card {
         padding: 1.2rem;
       }
-
       .avatar-shell {
         width: 11rem;
       }
-
       .mini-stats {
         grid-template-columns: 1fr;
       }
-
       .ring.two,
       .orb[data-ring="2"] {
         display: none;
@@ -733,7 +780,7 @@
           </div>
         </div>
         <h1>ธนวัตน์ น้อยพาลี</h1>
-        <p class="role">IT Support / Network Administrator / System Administrator / Programmer</p>
+        <p class="role">IT Support / Network Administrator / System Administration / Programmer</p>
 
         <div class="mini-stats">
           <div class="stat">
@@ -857,6 +904,7 @@
               <li>ดูแล Microsoft 365, Windows Server, Linux Server, NAS, Database, Docker, Portainer และ Web Server</li>
               <li>สร้าง dashboard และระบบ monitoring ผ่าน Grafana สำหรับงานปฏิบัติการและการติดตามสถานะระบบ</li>
               <li>ดูแลระบบ CCTV, Farm Online, Skov และ Temp-view เพื่อรองรับงานที่ต้องการความต่อเนื่องสูง</li>
+              <li>ดูแลและบริหารจัดการระบบ ERP Oracle NetSuite สำหรับการทำงานในองค์กร</li>
             </ul>
           </article>
 
@@ -893,6 +941,7 @@
         </div>
       </div>
     </section>
+    
     <section id="skills">
       <div class="container">
         <div class="section-heading reveal">
