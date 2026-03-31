@@ -1,0 +1,11 @@
+services:
+  resume:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tanawat-resume
+    environment:
+      PORT: "8080"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
