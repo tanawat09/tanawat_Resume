@@ -1328,20 +1328,22 @@ a { text-decoration: none; color: inherit; }
 }
 
 .cert-card {
-    text-align: center;
-    padding: 2rem 1.5rem;
+    text-align: left;
+    padding: 0;
     position: relative;
+    overflow: hidden;
 }
 
 .cert-ribbon {
     position: absolute;
-    top: 12px; right: -8px;
+    top: 14px; right: -8px;
     padding: 0.2rem 1rem;
     background: var(--gradient-3);
     color: white;
     font-size: 0.7rem;
     font-weight: 600;
     border-radius: 4px 0 0 4px;
+    z-index: 2;
 }
 
 .cert-ribbon::after {
@@ -1353,32 +1355,34 @@ a { text-decoration: none; color: inherit; }
     border-left-color: #c2185b;
 }
 
-.cert-icon-wrap {
-    width: 65px; height: 65px;
-    border-radius: 50%;
-    background: var(--gradient-1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: white;
-    margin: 0 auto 1rem;
-    box-shadow: var(--shadow-primary);
+.cert-image-link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.cert-image-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.7rem;
     transition: var(--transition);
 }
 
-.cert-card:hover .cert-icon-wrap {
-    transform: scale(1.15) rotate(10deg);
+.cert-card:hover .cert-image-link img {
+    transform: scale(1.04);
 }
-
-.cert-icon-wrap.oracle { background: linear-gradient(135deg, #ef4444, #f97316); box-shadow: 0 8px 25px rgba(239, 68, 68, 0.25); }
-.cert-icon-wrap.network { background: var(--gradient-2); box-shadow: 0 8px 25px rgba(6, 182, 212, 0.25); }
 
 .cert-card h3 {
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 0.4rem;
+    margin: 1rem 1.2rem 0.5rem;
+    line-height: 1.45;
+    min-height: 2.9em;
 }
 
 .cert-type {
@@ -1389,17 +1393,23 @@ a { text-decoration: none; color: inherit; }
     font-size: 0.72rem;
     color: var(--primary);
     font-weight: 500;
-    margin-bottom: 0.5rem;
+    margin: 0 1.2rem 0.65rem;
 }
 
 .cert-date, .cert-org {
     font-size: 0.8rem;
     color: var(--text-muted);
-    margin-top: 0.3rem;
+    margin: 0 1.2rem 0.35rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.3rem;
+    line-height: 1.5;
+}
+
+.cert-card .cert-date:last-child,
+.cert-card .cert-org:last-child {
+    margin-bottom: 1.2rem;
 }
 
 .cert-date i, .cert-org i { color: var(--primary-light); }
