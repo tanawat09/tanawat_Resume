@@ -1356,19 +1356,23 @@ a { text-decoration: none; color: inherit; }
 }
 
 .cert-image-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 360px;
     background: linear-gradient(135deg, #f8fafc, #eef2ff);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
 }
 
 .cert-image-link img {
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: calc(100% - 1.4rem);
+    max-height: calc(100% - 1.4rem);
     object-fit: contain;
-    padding: 0.7rem;
     transition: var(--transition);
 }
 
@@ -1610,6 +1614,7 @@ a { text-decoration: none; color: inherit; }
     .edu-details { align-items: center; }
 
     .cert-grid { grid-template-columns: 1fr; }
+    .cert-image-link { height: 320px; }
     .contact-grid { grid-template-columns: 1fr; }
     .project-list { grid-template-columns: 1fr; }
     .language-bars { flex-direction: column; }
