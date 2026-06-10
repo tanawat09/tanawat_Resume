@@ -13,6 +13,7 @@ FROM debian:bookworm-slim
 WORKDIR /app
 
 COPY --from=builder /app/target/release/tanawat_resume /usr/local/bin/tanawat_resume
+COPY --from=builder /app/public /app/public
 
 EXPOSE 8080
 

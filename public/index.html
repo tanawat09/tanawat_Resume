@@ -6,26 +6,25 @@
   <title>Tanawat Noipalee | Resume</title>
   <meta
     name="description"
-    content="เรซุเม่สาย IT Infrastructure, Network, Server, Security และ Internal Development ของ Tanawat Noipalee"
+    content="เรซูเม่ของ Tanawat Noipalee ด้าน IT Support, Network, Infrastructure, Security และ Programmer พร้อมแกลเลอรีใบประกาศนียบัตร"
   />
   <style>
     :root {
-      --bg: #ffffff;
-      --bg-2: #f8fafc;
+      --bg: #f4f7fb;
       --surface: #ffffff;
-      --card: #ffffff;
-      --line: #e2e8f0;
-      --text: #1e293b;
+      --surface-soft: #f8fbff;
+      --text: #0f172a;
       --muted: #64748b;
-      --primary: #2563eb;
-      --secondary: #0ea5e9;
+      --line: #dbe4f0;
+      --primary: #1d4ed8;
+      --primary-soft: #e8f0ff;
+      --secondary: #0891b2;
       --accent: #ea580c;
-      --glow: 0 4px 14px rgba(37, 99, 235, 0.08);
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-      --radius-xl: 16px;
-      --radius-lg: 12px;
-      --radius-md: 8px;
-      --max: 1080px;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --max: 1120px;
     }
 
     * {
@@ -42,14 +41,20 @@
       min-height: 100vh;
       font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
       color: var(--text);
-      background: var(--bg-2);
-      line-height: 1.6;
-      overflow-x: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(29, 78, 216, 0.08), transparent 28%),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      line-height: 1.65;
     }
 
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
 
     .container {
@@ -60,17 +65,17 @@
     .navbar {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(18px);
+      z-index: 50;
       background: rgba(255, 255, 255, 0.9);
-      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(219, 228, 240, 0.9);
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1.2rem;
+      gap: 1rem;
       padding: 1rem 0;
     }
 
@@ -78,19 +83,19 @@
       display: flex;
       align-items: center;
       gap: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      font-weight: 800;
+      letter-spacing: 0.03em;
     }
 
     .brand-mark {
-      width: 2.75rem;
-      height: 2.75rem;
+      width: 2.8rem;
+      height: 2.8rem;
       display: grid;
       place-items: center;
-      border-radius: 10px;
-      background: var(--bg-2);
-      border: 1px solid var(--line);
+      border-radius: 14px;
       color: var(--primary);
+      background: var(--primary-soft);
+      border: 1px solid #c8d7ff;
     }
 
     .nav-links {
@@ -98,14 +103,13 @@
       flex-wrap: wrap;
       gap: 1rem;
       color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
     }
 
     .nav-links a {
       position: relative;
-      padding-bottom: 0.2rem;
-      transition: color 0.25s ease;
-      font-weight: 500;
-      font-size: 0.95rem;
+      padding-bottom: 0.15rem;
     }
 
     .nav-links a::after {
@@ -115,9 +119,9 @@
       bottom: 0;
       width: 100%;
       height: 2px;
+      background: var(--primary);
       transform: scaleX(0);
       transform-origin: right;
-      background: var(--primary);
       transition: transform 0.25s ease;
     }
 
@@ -133,13 +137,21 @@
     }
 
     .hero {
-      padding: 4.5rem 0 2.5rem;
+      padding: 4rem 0 2rem;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .project-grid,
+    .contact-grid,
+    .cert-grid,
+    .hero-facts {
+      display: grid;
+      gap: 1.2rem;
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 360px 1fr;
-      gap: 2rem;
+      grid-template-columns: 340px 1fr;
       align-items: stretch;
     }
 
@@ -151,48 +163,39 @@
       box-shadow: var(--shadow);
     }
 
-    .profile-panel {
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
+    .profile-panel,
+    .hero-panel,
+    .card {
+      padding: 1.6rem;
     }
 
-    .hero-panel {
-      padding: 2.3rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .status-chip,
-    .hero-chip {
+    .chip {
       display: inline-flex;
       align-items: center;
       gap: 0.55rem;
-      padding: 0.55rem 0.95rem;
+      padding: 0.5rem 0.9rem;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #ffffff;
+      background: var(--primary-soft);
+      border: 1px solid #c8d7ff;
       color: var(--primary);
       font-size: 0.9rem;
-      font-weight: 600;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      font-weight: 700;
     }
 
-    .dot {
+    .chip .dot {
       width: 0.55rem;
       height: 0.55rem;
-      border-radius: 999px;
-      background: var(--secondary);
+      border-radius: 50%;
+      background: #22c55e;
     }
 
     .avatar-shell {
-      margin: 1.8rem auto 1.2rem;
       width: 14rem;
       aspect-ratio: 1;
+      margin: 1.4rem auto 1rem;
+      padding: 0.35rem;
       border-radius: 50%;
-      padding: 0.45rem;
-      background: var(--line);
-      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, #c7d9ff, #d9f4ff);
     }
 
     .avatar {
@@ -200,7 +203,7 @@
       height: 100%;
       border-radius: 50%;
       overflow: hidden;
-      background: #fff;
+      border: 4px solid #fff;
     }
 
     .avatar img {
@@ -208,42 +211,34 @@
       height: 100%;
       object-fit: cover;
       object-position: center 28%;
-      display: block;
     }
 
     .profile-panel h1 {
-      font-size: 1.75rem;
-      margin-bottom: 0.55rem;
       text-align: center;
-      color: var(--text);
+      font-size: 1.75rem;
+      margin-bottom: 0.4rem;
     }
 
     .role {
       text-align: center;
       color: var(--muted);
-      max-width: 18rem;
-      margin: 0 auto 1.5rem;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .mini-stats {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0.8rem;
-      margin-top: 1.5rem;
+      margin-top: 1.4rem;
     }
 
     .stat,
     .hero-info,
     .focus-item {
-      padding: 1rem;
+      padding: 0.95rem;
       border-radius: var(--radius-md);
-      background: var(--bg-2);
+      background: var(--surface-soft);
       border: 1px solid var(--line);
-    }
-
-    .stat {
-      text-align: center;
     }
 
     .stat strong,
@@ -254,45 +249,42 @@
     }
 
     .stat span,
-    .hero-info span {
+    .hero-info span,
+    .meta {
       color: var(--muted);
-      font-size: 0.82rem;
-      font-weight: 500;
+      font-size: 0.85rem;
     }
 
     .hero-panel h2 {
-      margin-top: 1.1rem;
-      font-size: clamp(2.1rem, 4vw, 3.4rem);
-      line-height: 1.15;
-      color: var(--text);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.1;
+      margin: 1rem 0 0.9rem;
     }
 
     .gradient-text {
       display: block;
       color: var(--primary);
-      font-weight: 800;
     }
 
     .hero-summary {
-      margin-top: 1.2rem;
       color: var(--muted);
-      font-size: 1.05rem;
+      font-size: 1.03rem;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.9rem;
-      margin: 1.5rem 0 1.9rem;
+      margin: 1.4rem 0 1.6rem;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.75rem 1.2rem;
-      border-radius: var(--radius-md);
-      font-weight: 600;
+      padding: 0.8rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -303,30 +295,21 @@
 
     .btn-primary {
       color: #fff;
-      background: var(--primary);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
     }
 
     .btn-secondary {
       color: var(--text);
-      border: 1px solid var(--line);
       background: #fff;
+      border: 1px solid var(--line);
     }
 
-    .hero-gridline,
-    .about-grid,
-    .skill-layout,
-    .project-grid,
-    .contact-grid {
-      display: grid;
-      gap: 1.2rem;
-    }
-
-    .hero-gridline {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+    .hero-facts {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     section {
-      padding: 1.2rem 0 2rem;
+      padding: 1.3rem 0 2rem;
     }
 
     .section-heading {
@@ -339,137 +322,169 @@
       font-size: 0.78rem;
       color: var(--primary);
       margin-bottom: 0.35rem;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .section-heading h3 {
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      color: var(--text);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin-bottom: 0.45rem;
     }
 
     .section-heading p {
-      max-width: 48rem;
       color: var(--muted);
-      margin-top: 0.5rem;
+      max-width: 46rem;
     }
 
     .about-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 0.9fr;
     }
 
-    .card {
-      padding: 1.5rem;
-      border-radius: var(--radius-lg);
-    }
-
-    .info-list {
+    .info-list,
+    .focus-list,
+    .training-list {
       display: grid;
-      gap: 0.6rem;
-      font-size: 0.95rem;
+      gap: 0.8rem;
+      list-style: none;
+      padding: 0;
     }
 
     .info-list li {
       display: flex;
+      gap: 0.6rem;
       align-items: baseline;
-      gap: 0.5rem;
     }
 
     .info-list strong {
-      min-width: 7.5rem;
-      color: var(--text);
+      min-width: 7.2rem;
     }
 
-    .info-list span {
+    .info-list span,
+    .focus-item,
+    .training-item span,
+    .job ul,
+    .project-card p,
+    .contact-card span {
       color: var(--muted);
     }
 
-    .focus-list {
-      display: grid;
-      gap: 0.9rem;
-    }
-
-    .focus-item strong {
+    .focus-item strong,
+    .training-item strong {
       display: block;
-      margin-bottom: 0.3rem;
       color: var(--text);
-      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
     }
 
     .timeline {
-      position: relative;
       display: grid;
       gap: 1rem;
     }
 
     .job {
-      position: relative;
-      border: 1px solid var(--line);
-      padding: 1.8rem;
+      padding: 1.5rem;
     }
 
     .job-head {
       display: flex;
-      align-items: start;
       justify-content: space-between;
       gap: 1rem;
-      margin-bottom: 0.85rem;
-      padding-bottom: 0.8rem;
+      align-items: start;
+      padding-bottom: 0.9rem;
       border-bottom: 1px solid var(--line);
+      margin-bottom: 0.9rem;
+    }
+
+    .company {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.2rem;
     }
 
     .job-head h4 {
-      font-size: 1.15rem;
-      color: var(--text);
-      margin-bottom: 0.3rem;
+      font-size: 1.12rem;
+      margin-bottom: 0.2rem;
     }
 
-    .job-head .company {
-      font-weight: 600;
-      color: var(--primary);
-    }
-
-    .job-head .period {
-      color: var(--muted);
-      font-weight: 600;
-      font-size: 0.9rem;
+    .period {
       text-align: right;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
     }
 
-    .job-head .salary {
-      font-size: 0.9rem;
+    .salary {
       color: var(--accent);
-      margin-top: 0.3rem;
       display: block;
+      margin-top: 0.25rem;
     }
 
     .job ul {
       padding-left: 1.2rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .job li {
-      margin-top: 0.3rem;
     }
 
     .project-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .project-card {
-      position: relative;
-      background: #ffffff;
-    }
-
     .project-card h4 {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
       color: var(--primary);
+      margin-bottom: 0.55rem;
     }
 
-    .project-card p {
+    .training-item {
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .training-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .cert-note {
+      margin-top: 0.8rem;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
+    }
+
+    .cert-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 1.2rem;
+    }
+
+    .cert-card {
+      display: block;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
+    }
+
+    .cert-thumb {
+      aspect-ratio: 4 / 3;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--surface-soft);
+      margin-bottom: 0.95rem;
+    }
+
+    .cert-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cert-card h4 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: var(--text);
+    }
+
+    .cert-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
       line-height: 1.5;
     }
 
@@ -482,57 +497,42 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-size: 0.76rem;
-      margin-bottom: 0.45rem;
-      font-weight: 700;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
     }
 
     .contact-card strong {
-      font-size: 1rem;
-      word-break: break-word;
-      color: var(--text);
-      font-weight: 500;
       display: block;
-      margin-bottom: 0.2rem;
-    }
-    
-    .contact-card span {
-      font-size: 0.9rem;
-      color: var(--muted);
+      margin-bottom: 0.25rem;
     }
 
     .footer {
       padding: 1rem 0 2.4rem;
-      color: var(--muted);
       text-align: center;
+      color: var(--muted);
       font-size: 0.9rem;
     }
 
     .to-top {
       position: fixed;
-      right: 1.1rem;
-      bottom: 1.1rem;
+      right: 1rem;
+      bottom: 1rem;
       width: 3rem;
       height: 3rem;
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background: var(--surface);
+      background: #fff;
       border: 1px solid var(--line);
-      color: var(--text);
-      font-weight: 900;
       box-shadow: var(--shadow);
-      z-index: 50;
-      transition: transform 0.2s;
-    }
-
-    .to-top:hover {
-      transform: translateY(-3px) scale(1.05);
+      z-index: 30;
+      font-weight: 900;
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
     }
 
     .reveal.visible {
@@ -543,16 +543,18 @@
     @media (max-width: 980px) {
       .hero-grid,
       .about-grid,
-      .skill-layout,
       .project-grid,
       .contact-grid,
-      .hero-gridline {
+      .cert-grid,
+      .hero-facts {
         grid-template-columns: 1fr;
       }
+
       .job-head {
         flex-direction: column;
       }
-      .job-head .period {
+
+      .period {
         text-align: left;
       }
     }
@@ -562,10 +564,19 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      .hero-panel,
+
       .profile-panel,
+      .hero-panel,
       .card {
         padding: 1.2rem;
+      }
+
+      .avatar-shell {
+        width: 11rem;
+      }
+
+      .mini-stats {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -579,9 +590,9 @@
       </a>
       <div class="nav-links">
         <a href="#about">ข้อมูลส่วนตัว</a>
-        <a href="#experience">ประวัติการทำงาน</a>
-        <a href="#projects">ผลงาน</a>
+        <a href="#experience">ประสบการณ์</a>
         <a href="#education">การศึกษา/อบรม</a>
+        <a href="#projects">ผลงาน</a>
         <a href="#contact">ติดต่อ</a>
       </div>
     </div>
@@ -590,54 +601,55 @@
   <header class="hero" id="home">
     <div class="container hero-grid">
       <aside class="panel profile-panel reveal">
-        <div class="status-chip"><span class="dot"></span>พร้อมเริ่มงาน 2 เดือน</div>
+        <div class="chip"><span class="dot"></span>พร้อมเริ่มงานภายใน 2 เดือน</div>
         <div class="avatar-shell">
           <div class="avatar">
-            <img src="/profile.jpg" alt="Tanawat Noipalee portrait" onerror="this.src='https://via.placeholder.com/300?text=Profile+Pic'"/>
+            <img src="/profile.jpg" alt="Tanawat Noipalee portrait" />
           </div>
         </div>
         <h1>ธนวัตน์ น้อยพาลี</h1>
-        <p class="role">โปรแกรมเมอร์ / IT Support / Network</p>
+        <p class="role">Programmer / IT Support / Network / Infrastructure</p>
 
         <div class="mini-stats">
           <div class="stat">
-            <strong>เงินเดือนที่ต้องการ</strong>
-            <span>27k - 35k</span>
+            <strong>27k - 35k</strong>
+            <span>เงินเดือนที่ต้องการ</span>
           </div>
           <div class="stat">
-            <strong>ประเภทงาน</strong>
-            <span>พนักงานประจำ</span>
+            <strong>Full-time</strong>
+            <span>ประเภทงานที่สนใจ</span>
           </div>
         </div>
       </aside>
 
       <div class="panel hero-panel reveal">
-        <div class="hero-chip">IT Infrastructure • Security • Operations • Internal Systems</div>
+        <div class="chip">IT Infrastructure • Security • Operations • Internal Systems</div>
         <h2>
-          เปลี่ยนระบบ IT
-          <span class="gradient-text">ให้ราบรื่นและคล่องตัว</span>
+          ดูแลระบบ IT
+          <span class="gradient-text">ให้เสถียร พร้อมใช้ และแก้ปัญหาได้จริง</span>
         </h2>
         <p class="hero-summary">
-          ประสบการณ์ในงานดูแลระบบโครงสร้างพื้นฐานไอที รวมถึงด้านพัฒนาโปรแกรม ระบบเครือข่ายความปลอดภัย และการแก้ไขปัญหาฮาร์ดแวร์-ซอฟต์แวร์ เน้นผลลัพธ์การใช้งานจริงและการดูแลระบบให้พร้อมใช้งาน 24 ชั่วโมง
+          มีประสบการณ์ทั้งด้านดูแลระบบเครือข่าย เซิร์ฟเวอร์ ความปลอดภัย ระบบภายในองค์กร
+          และการพัฒนาโปรแกรมสนับสนุนงาน เน้นผลลัพธ์ที่ใช้งานได้จริง ลดปัญหาหน้างาน และทำให้ระบบพร้อมใช้ตลอดเวลา
         </p>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">ข้อมูลติดต่อ</a>
-          <a class="btn btn-secondary" href="#experience">ดูประวัติแบบละเอียด</a>
+          <a class="btn btn-secondary" href="#education">ดูใบประกาศ</a>
         </div>
 
-        <div class="hero-gridline">
+        <div class="hero-facts">
           <div class="hero-info">
             <span>เว็บไซต์</span>
-            <strong><a href="https://tanawat.noipalee.com/">tanawat.noipalee.com</a></strong>
+            <strong><a href="https://tanawat.noipalee.com/" target="_blank" rel="noopener noreferrer">tanawat.noipalee.com</a></strong>
           </div>
           <div class="hero-info">
             <span>ภาษาอังกฤษ</span>
-            <strong>พูด/อ่าน/เขียน (พอใช้)</strong>
+            <strong>พอใช้ในการทำงาน</strong>
           </div>
           <div class="hero-info">
-            <span>การขับขี่รถ</span>
-            <strong>รถยนต์, จักรยานยนต์</strong>
+            <span>พาหนะ</span>
+            <strong>รถยนต์ / รถจักรยานยนต์</strong>
           </div>
         </div>
       </div>
@@ -648,35 +660,40 @@
     <section id="about">
       <div class="container">
         <div class="section-heading reveal">
-          <div class="eyebrow">Personal Info & Objectives</div>
-          <h3>ข้อมูลส่วนบุคคล และเป้าหมายการทำงาน</h3>
+          <div class="eyebrow">About</div>
+          <h3>ข้อมูลส่วนตัวและเป้าหมายการทำงาน</h3>
+          <p>มองหาบทบาทที่ได้ใช้ทั้งทักษะดูแลระบบ พัฒนาเครื่องมือภายใน และแก้ปัญหา IT Infrastructure แบบครบวงจร</p>
         </div>
 
         <div class="about-grid">
           <article class="card reveal">
-            <h4 style="margin-bottom: 1rem; color: var(--text);">ข้อมูลส่วนบุคคล</h4>
-            <ul class="info-list" style="list-style: none; padding: 0;">
+            <h4 style="margin-bottom: 1rem; color: var(--text);">ข้อมูลส่วนตัว</h4>
+            <ul class="info-list">
               <li><strong>สัญชาติ:</strong> <span>ไทย</span></li>
               <li><strong>ศาสนา:</strong> <span>พุทธ</span></li>
-              <li><strong>น้ำหนัก/ส่วนสูง:</strong> <span>60 กก. / 159 ซม.</span></li>
               <li><strong>เพศ:</strong> <span>ชาย</span></li>
               <li><strong>สถานภาพ:</strong> <span>โสด</span></li>
               <li><strong>วันเกิด:</strong> <span>9 ธันวาคม 2535</span></li>
-              <li><strong>พาหนะส่วนตัว:</strong> <span>รถยนต์, รถจักรยานยนต์</span></li>
-              <li><strong>การเกณฑ์ทหาร:</strong> <span>ได้รับการยกเว้น/จบ รด.</span></li>
-              <li><strong>ความสามารถเฉพาะ:</strong> <span>ถ่ายรูป</span></li>
+              <li><strong>น้ำหนัก/ส่วนสูง:</strong> <span>60 กก. / 159 ซม.</span></li>
+              <li><strong>ที่อยู่:</strong> <span>บุรีรัมย์</span></li>
             </ul>
           </article>
 
           <aside class="card reveal">
-            <h4 style="margin-bottom: 1rem; color: var(--text);">ลักษณะงานที่ต้องการ</h4>
-            <ul class="info-list" style="list-style: none; padding: 0;">
-              <li><strong>ตำแหน่งงานที่มองหา:</strong> <span>โปรแกรมเมอร์, IT Support, Network</span></li>
-              <li><strong>ประเภทการจ้างงาน:</strong> <span>ประจำ</span></li>
-              <li><strong>เงินเดือนที่ต้องการ:</strong> <span>27,000 - 35,000 บาท</span></li>
-              <li><strong>วันที่สามารถเริ่มงานได้:</strong> <span>2 เดือน</span></li>
-              <li><strong style="color:var(--accent); font-weight:normal;">*หมายเหตุ:</strong> <span style="color:var(--accent);">ไม่สนใจงานขายประกัน</span></li>
-            </ul>
+            <div class="focus-list">
+              <div class="focus-item">
+                <strong>System & Network Support</strong>
+                ดูแลระบบเครือข่าย Windows Server, Linux Server, Firewall, VPN, CCTV และงานซัพพอร์ตผู้ใช้งาน
+              </div>
+              <div class="focus-item">
+                <strong>Internal Development</strong>
+                พัฒนาโปรแกรมและระบบภายในองค์กรเพื่อช่วยลดงานซ้ำและเพิ่มประสิทธิภาพการทำงาน
+              </div>
+              <div class="focus-item">
+                <strong>Operational Ownership</strong>
+                คิดจากของจริงหน้างาน เน้นระบบพร้อมใช้ ปลอดภัย และแก้ปัญหาให้จบได้
+              </div>
+            </div>
           </aside>
         </div>
       </div>
@@ -686,7 +703,8 @@
       <div class="container">
         <div class="section-heading reveal">
           <div class="eyebrow">Experience</div>
-          <h3>ประวัติการทำงาน / ฝึกงาน</h3>
+          <h3>ประสบการณ์การทำงาน</h3>
+          <p>เส้นทางงานที่เติบโตจากสายซัพพอร์ตไปสู่การดูแลระบบ โครงสร้างพื้นฐาน และงานพัฒนาโปรแกรมภายในองค์กร</p>
         </div>
 
         <div class="timeline">
@@ -695,7 +713,7 @@
               <div>
                 <div class="company">บริษัท ชูวิทย์ฟาร์ม (2019) จำกัด (มหาชน)</div>
                 <h4>เจ้าหน้าที่เทคโนโลยีสารสนเทศ</h4>
-                <div style="font-size: 0.9rem; color: var(--muted);">ระดับ: เจ้าหน้าที่ | ที่อยู่: 723 ถ.โชคชัย-เดชอุดม ต.นางรอง อ.นางรอง จ.บุรีรัมย์</div>
+                <div class="meta">ดูแลระบบ ERP, Network, Firewall, Microsoft 365, Database, Server, Grafana, Docker, CCTV และ IOT</div>
               </div>
               <div class="period">
                 พฤศจิกายน 2563 - ปัจจุบัน
@@ -704,25 +722,20 @@
             </div>
             <ul>
               <li>ดูแลระบบคุณภาพ ISO 9001, ISO 14001 และ ISO 45001</li>
-              <li>ERP oracle netsuite</li>
-              <li>Network administrator</li>
-              <li>Programmers responsible for programming support</li>
-              <li>Admin of Firewall (Fortigate) 9 site</li>
-              <li>Admin of MS 365 และ Database Admin</li>
-              <li>windows server และ Linux server</li>
-              <li>Report Grafana</li>
-              <li>dockre</li>
-              <li>Farm Online Skov, temp-view</li>
-              <li>Admin of CCTV 365 ตัว และ IOT</li>
+              <li>ดูแล Network administrator และ Firewall FortiGate หลายสาขา</li>
+              <li>บริหาร Microsoft 365, Database, Windows Server และ Linux Server</li>
+              <li>พัฒนาโปรเจกต์ระบบลางานออนไลน์เพื่อช่วยให้การยื่นลา อนุมัติ และติดตามสถานะทำได้สะดวกขึ้น</li>
+              <li>ทำรายงานและระบบติดตามสถานะผ่าน Grafana</li>
+              <li>ดูแล Dockers, Farm Online, Skov, temp-view และระบบ CCTV</li>
             </ul>
           </article>
 
           <article class="card job reveal">
             <div class="job-head">
               <div>
-                <div class="company">Seika ykc Circuit Thailand co.,ltd *ปิดกิจการ</div>
-                <h4>โปรแกรมเมอร์ / IT Support</h4>
-                <div style="font-size: 0.9rem; color: var(--muted);">ระดับ: เจ้าหน้าที่ | ที่อยู่: เขตนิคมอุตสาหกรรม 304</div>
+                <div class="company">Seika YKC Circuit Thailand Co., Ltd.</div>
+                <h4>Programmer / IT Support</h4>
+                <div class="meta">Officer 1 | ERP, McFrame, Payroll, Print Server, FortiGate และงานซัพพอร์ตภายใน</div>
               </div>
               <div class="period">
                 เมษายน 2562 - ตุลาคม 2563
@@ -730,63 +743,29 @@
               </div>
             </div>
             <ul>
-              <li>Job position : Officer 1</li>
-              <li>ERP system administration และ Admin of ERP (McFrame) Server</li>
-              <li>Computer rehearsal according to the program - Printer rehearsal</li>
-              <li>Network administrator, windows server</li>
-              <li>Admin of Business Plus Payroll และ Admin of Time Attendance</li>
-              <li>Admin of Finger Scan, Admin of Print Server</li>
-              <li>Admin of Multi function printer(Cannon)</li>
-              <li>Admin of Firewall(FortiGATE) และ Admin of FTP(Cloud system)</li>
-              <li>Database Admin</li>
-              <li>Network monitoring and Admin (Cisco Aironet : AIR-AP1542I)</li>
-              <li>Fax maintenances และ Admin of CCTV</li>
+              <li>ดูแล ERP system และ McFrame Server</li>
+              <li>ดูแล Business Plus Payroll, Time Attendance และ Finger Scan</li>
+              <li>ดูแล Windows Server, Print Server, FTP และฐานข้อมูล</li>
+              <li>ซัพพอร์ตเครื่องพิมพ์ Canon, Fax, CCTV และอุปกรณ์สำนักงาน</li>
             </ul>
           </article>
 
           <article class="card job reveal">
             <div class="job-head">
               <div>
-                <div class="company">yano electronics (thailand) co. ltd</div>
-                <h4>supervisor / โปรแกรมเมอร์</h4>
-                <div style="font-size: 0.9rem; color: var(--muted);">ระดับ: หัวหน้างาน | ที่อยู่: เขตนิคมอุตสาหกรรม 304</div>
+                <div class="company">Yano Electronics (Thailand) Co., Ltd.</div>
+                <h4>Supervisor / Programmer</h4>
+                <div class="meta">เขียนโปรแกรม ซัพพอร์ตผู้ใช้ และดูแลระบบคอมพิวเตอร์ในโรงงาน</div>
               </div>
               <div class="period">
                 พฤษภาคม 2560 - เมษายน 2562
                 <span class="salary">เงินเดือน: 17,000</span>
               </div>
             </div>
-            <div style="margin-bottom:0.5rem;font-weight:600;font-size:0.95rem;color:var(--text);">ลักษณะงาน: เขียนโปรแกรม , Support User/IT Support</div>
             <ul>
-              <li>1. Microsoft Office Access, Excel, Outlook, Word</li>
-              <li>2. Support Windows live mail</li>
-              <li>3. Adobe Photoshop and Adobe Lightroom</li>
-              <li>4. Visual Studio.NET, Python, PHP</li>
-              <li>5. Troubleshoot hardware, software, network problems</li>
-              <li>6. Install Windows Office and other programs</li>
-              <li>7. Can repair the printer, monitor printer</li>
-              <li>8. Check the system. Hardware, Network, OS</li>
-              <li>9. Understand the operation of computers, printers, monitors, backup devices</li>
-              <li>10. Install Network Lan, Wan</li>
-              <li>11. Install to the Internet and Security system</li>
-              <li>12. Install, maintain and troubleshoot computer systems, Server Windows, Linux, SQL, MySQL, VMware</li>
-              <li>13. Install LAN network, router switch, CCTV Finger Scan, image system</li>
-            </ul>
-          </article>
-
-          <article class="card job reveal">
-            <div class="job-head">
-              <div>
-                <div class="company">โรงพยาบาลนางรอง</div>
-                <h4>โปรแกรมเมอร์ / IT Support</h4>
-                <div style="font-size: 0.9rem; color: var(--muted);">ที่อยู่: 692 ถ. โชคชัย-เดชอุดม ต.นางรอง อ.นางรอง จ.บุรีรัมย์ หมู่ 25 โทร 044-633456</div>
-              </div>
-              <div class="period">
-                มกราคม 2560 - เมษายน 2560
-              </div>
-            </div>
-            <ul>
-              <li>รายละเอียดงาน: เขียนโปรแกรม / IT Support</li>
+              <li>ใช้เครื่องมือเช่น Visual Studio .NET, Python, PHP และ Microsoft Office</li>
+              <li>ติดตั้งและแก้ไขปัญหา Windows, Office, Network และอุปกรณ์ฮาร์ดแวร์</li>
+              <li>ดูแลระบบ Server, Linux, SQL, MySQL, VMware, Router, Switch, CCTV และ Finger Scan</li>
             </ul>
           </article>
         </div>
@@ -804,7 +783,7 @@
             <article class="card reveal" style="height: 100%;">
               <h4 style="color: var(--primary); margin-bottom: 0.5rem;">ปริญญาตรี</h4>
               <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 1rem;">ปีที่สำเร็จการศึกษา: 2560</p>
-              <ul class="info-list" style="list-style: none; padding: 0;">
+              <ul class="info-list">
                 <li><strong>สถานศึกษา:</strong> <span>มหาวิทยาลัยราชภัฏบุรีรัมย์</span></li>
                 <li><strong>คณะ:</strong> <span>วิทยาศาสตร์</span></li>
                 <li><strong>สาขา:</strong> <span>วิทยาการคอมพิวเตอร์</span></li>
@@ -816,52 +795,138 @@
           <div>
             <div class="section-heading reveal">
               <div class="eyebrow">Certifications</div>
-              <h3>อบรม / ประกาศนียบัตร</h3>
+              <h3>ใบประกาศนียบัตร &amp; อบรม</h3>
             </div>
             <article class="card reveal" style="height: 100%;">
-              <ul style="list-style:none; padding:0; display:grid; gap:1.2rem;">
-                <li style="border-bottom: 1px solid var(--line); padding-bottom: 0.8rem;">
-                  <strong style="color:var(--text); display:block;">หลักสูตร Basic Cybersecurity</strong>
-                  <span style="color:var(--muted); font-size:0.9rem; display:block;">มกราคม 2568 - ปัจจุบัน | ประกาศนียบัตร/วุฒิบัตร: วุฒิบัตร</span>
+              <ul class="training-list">
+                <li class="training-item">
+                  <strong>Basic Cybersecurity</strong>
+                  <span>กรมพัฒนาฝีมือแรงงาน กระทรวงแรงงาน</span>
                 </li>
-                <li style="border-bottom: 1px solid var(--line); padding-bottom: 0.8rem;">
-                  <strong style="color:var(--text); display:block;">WORKSHOP PROGRAM</strong>
-                  <span style="color:var(--muted); font-size:0.9rem; display:block;">พฤศจิกายน 2560 | สถาบัน: oracle</span>
+                <li class="training-item">
+                  <strong>การใช้งานอินเทอร์เน็ตเบื้องต้น</strong>
+                  <span>มหาวิทยาลัยราชภัฏจันทรเกษม | CRU MOOCs</span>
                 </li>
-                <li>
-                  <strong style="color:var(--text); display:block;">หลักสูตร Basic Network</strong>
-                  <span style="color:var(--muted); font-size:0.9rem; display:block;">ไม่ระบุช่วงเวลา | สถาบัน: กรมพัฒนาฝีมือแรงงาน</span>
+                <li class="training-item">
+                  <strong>Basic Network สำหรับมือใหม่สาย IT</strong>
+                  <span>กรมพัฒนาฝีมือแรงงาน ร่วมกับ CIPAT</span>
+                </li>
+                <li class="training-item">
+                  <strong>เทคนิคการเพิ่มประสิทธิภาพการใช้โปรแกรม Microsoft Excel</strong>
+                  <span>กรมพัฒนาฝีมือแรงงาน กระทรวงแรงงาน</span>
+                </li>
+                <li class="training-item">
+                  <strong>n8n Workflow Automation</strong>
+                  <span>n8n Zero to Hero + LINE Chat AI Integration</span>
+                </li>
+                <li class="training-item">
+                  <strong>Generative AI ที่ช่วยให้ First Jobber ทำงานง่ายขึ้น</strong>
+                  <span>Mahidol Channel Academy (MCA)</span>
+                </li>
+                <li class="training-item">
+                  <strong>Oracle Academy Workshop</strong>
+                  <span>Practical Oracle Database 12c SQL Performance Tuning for Beginner</span>
+                </li>
+                <li class="training-item">
+                  <strong>LINK Fiber Optic &amp; FTTx Cabling Solutions</strong>
+                  <span>LINK ASIA LIMITED</span>
+                </li>
+                <li class="training-item">
+                  <strong>Microsoft Office พื้นฐาน</strong>
+                  <span>มหาวิทยาลัยราชภัฏบุรีรัมย์ | Word, Excel, PowerPoint</span>
+                </li>
+                <li class="training-item">
+                  <strong>Thailand IT Contest Festival 2018</strong>
+                  <span>ผลงานระบบแจ้งเตือนความปลอดภัยห้อง Data Center ผ่าน Line</span>
                 </li>
               </ul>
+              <p class="cert-note">คลิกที่รูปด้านล่างเพื่อเปิดดูใบประกาศขนาดเต็ม</p>
             </article>
           </div>
         </div>
+
+        <div class="section-heading reveal" style="margin-top: 1.6rem;">
+          <div class="eyebrow">Certificate Gallery</div>
+          <h3>แกลเลอรีใบประกาศ</h3>
+          <p>รวมรูปใบประกาศและการอบรมที่แนบมาในโปรไฟล์นี้</p>
+        </div>
+
+        <div class="cert-grid">
+          <a class="card cert-card reveal" href="/certificates/n8n-workflow-automation.jpg" target="_blank" rel="noopener noreferrer">
+            <div class="cert-thumb">
+              <img src="/certificates/n8n-workflow-automation.jpg" alt="n8n Workflow Automation Certificate" />
+            </div>
+            <h4>n8n Workflow Automation</h4>
+            <p>การสร้างระบบอัตโนมัติด้วย n8n Workflow Automation และ LINE Chat AI Integration</p>
+          </a>
+
+          <a class="card cert-card reveal" href="/certificates/generative-ai-first-jobber.png" target="_blank" rel="noopener noreferrer">
+            <div class="cert-thumb">
+              <img src="/certificates/generative-ai-first-jobber.png" alt="Generative AI First Jobber Certificate" />
+            </div>
+            <h4>Generative AI สำหรับ First Jobber</h4>
+            <p>คอร์สออนไลน์จาก Mahidol Channel Academy (MCA)</p>
+          </a>
+
+          <a class="card cert-card reveal" href="/certificates/link-fiber-optic-ftr-lfrs.jpg" target="_blank" rel="noopener noreferrer">
+            <div class="cert-thumb">
+              <img src="/certificates/link-fiber-optic-ftr-lfrs.jpg" alt="LINK Fiber Optic Certificate" />
+            </div>
+            <h4>LINK Fiber Optic &amp; FTTx</h4>
+            <p>Certificate of Attendance ปี 2025 จาก LINK ASIA LIMITED</p>
+          </a>
+
+          <a class="card cert-card reveal" href="/certificates/oracle-academy-sql-performance-tuning.png" target="_blank" rel="noopener noreferrer">
+            <div class="cert-thumb">
+              <img src="/certificates/oracle-academy-sql-performance-tuning.png" alt="Oracle Academy Certificate" />
+            </div>
+            <h4>Oracle Academy Workshop</h4>
+            <p>Practical Oracle Database 12c SQL Performance Tuning for Beginner</p>
+          </a>
+
+          <a class="card cert-card reveal" href="/certificates/microsoft-office-basic.jpg" target="_blank" rel="noopener noreferrer">
+            <div class="cert-thumb">
+              <img src="/certificates/microsoft-office-basic.jpg" alt="Microsoft Office Basic Certificate" />
+            </div>
+            <h4>Microsoft Office พื้นฐาน</h4>
+            <p>การใช้งาน Word, Excel และ PowerPoint ขั้นพื้นฐาน</p>
+          </a>
+
+          <a class="card cert-card reveal" href="/certificates/nsc-2018-data-center-alert.jpg" target="_blank" rel="noopener noreferrer">
+            <div class="cert-thumb">
+              <img src="/certificates/nsc-2018-data-center-alert.jpg" alt="Thailand IT Contest Festival 2018 Certificate" />
+            </div>
+            <h4>Thailand IT Contest Festival 2018</h4>
+            <p>โครงการระบบเฝ้าระวังและแจ้งเตือนความปลอดภัยห้อง Data Center ผ่าน Raspberry Pi</p>
+          </a>
+        </div>
       </div>
     </section>
-    
+
     <section id="projects">
       <div class="container">
         <div class="section-heading reveal">
           <div class="eyebrow">Projects</div>
-          <h3>โครงการ ผลงาน และประสบการณ์อื่นๆ</h3>
+          <h3>ผลงานและโครงการเด่น</h3>
+          <p>ตัวอย่างงานที่สะท้อนทั้งสายระบบ เครือข่าย และการพัฒนาโปรแกรมภายในองค์กร</p>
         </div>
 
         <div class="project-grid">
           <article class="card project-card reveal">
             <h4>Data Center Security Alert System</h4>
-            <p>โครงงานระบบเฝ้าระวังความปลอดภัยห้อง Data Center ผ่านแอพพลิเคชั่น Line โดยใช้ raspberry pi</p>
+            <p>ระบบเฝ้าระวังและแจ้งเตือนความปลอดภัยห้อง Data Center ผ่านแอปพลิเคชัน Line โดยใช้ Raspberry Pi</p>
           </article>
           <article class="card project-card reveal">
             <h4>Software Competition</h4>
-            <p>ได้รับทุนการแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์แห่งประเทศไทย ครั้งที่ 20 จาก ศูนย์เทคโนโลยีอิเล็กทรอนิกส์และคอมพิวเตอร์แห่งชาติ</p>
+            <p>ได้รับทุนและเข้าร่วมการแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์แห่งประเทศไทย ครั้งที่ 20 จาก NECTEC และ NSTDA</p>
           </article>
           <article class="card project-card reveal">
             <h4>Internal Operations Systems</h4>
-            <p>Costing Program, check inventory, check mold die, Training Record program, MT_Service program, IT_Service Program, Account Payment, ERP</p>
+            <p>พัฒนาระบบ Costing, Inventory, Training Record, MT Service, IT Service, Account Payment, ระบบลางานออนไลน์ และ ERP support</p>
           </article>
           <article class="card project-card reveal">
             <h4>Personal Website</h4>
-            <p>ดูประวัติการทำงานเพิ่มเติมที่: <a href="https://tanawat.noipalee.com/" target="_blank" style="color:var(--primary); text-decoration:underline;">tanawat.noipalee.com</a></p>
+            <p>ดูประวัติการทำงานเพิ่มเติมได้ที่ <a href="https://tanawat.noipalee.com/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">tanawat.noipalee.com</a></p>
           </article>
         </div>
       </div>
@@ -870,8 +935,9 @@
     <section id="contact">
       <div class="container">
         <div class="section-heading reveal">
-          <div class="eyebrow">Contact & References</div>
-          <h3>บุคคลอ้างอิง และ ติดต่อ</h3>
+          <div class="eyebrow">Contact</div>
+          <h3>ติดต่อและบุคคลอ้างอิง</h3>
+          <p>พร้อมพูดคุยเรื่องงานด้าน IT Support, Network, Infrastructure และงานพัฒนาระบบภายในองค์กร</p>
         </div>
 
         <div class="contact-grid">
@@ -880,17 +946,17 @@
             <strong>นายณัฐพล แสนคำ</strong>
             <span>หัวหน้าสาขาวิชาวิทยาการคอมพิวเตอร์</span>
           </article>
-          
+
           <article class="card contact-card reveal">
             <div class="contact-label">บุคคลอ้างอิง #2</div>
             <strong>นายพิชาภพ กะรันย์</strong>
-            <span>หัวหน้าศูนย์คอมพิวเตอร์โรงพยาบาลนางรอง</span>
+            <span>หัวหน้าศูนย์คอมพิวเตอร์ โรงพยาบาลนางรอง</span>
           </article>
 
           <article class="card contact-card reveal">
-            <div class="contact-label">อีเมลติดต่อคุณธนวัตน์</div>
+            <div class="contact-label">ติดต่อคุณธนวัตน์</div>
             <strong><a href="mailto:tanawat.noi@gmail.com">tanawat.noi@gmail.com</a></strong>
-            <span><a href="tel:0633430988">โทร: 063-343-0988</a></span>
+            <span><a href="tel:0633430988">โทร 063-343-0988</a></span>
           </article>
         </div>
       </div>
@@ -898,7 +964,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© 2026 Tanawat Noipalee. Crafted in Rust-powered static delivery.</div>
+    <div class="container">© 2026 Tanawat Noipalee. Resume and certificate portfolio.</div>
   </footer>
 
   <a class="to-top" href="#home" aria-label="Back to top">↑</a>
@@ -924,10 +990,12 @@
           link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
         });
       });
-    }, { threshold: 0.45 });
+    }, { threshold: 0.35 });
 
     sections.forEach((section) => {
-      if (section.id) navObserver.observe(section);
+      if (section.id) {
+        navObserver.observe(section);
+      }
     });
   </script>
 </body>

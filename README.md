@@ -42,6 +42,27 @@ docker compose down
 - แอปรองรับ `PORT` environment variable แล้ว จึงย้ายไปรันบน Docker, VPS หรือ PaaS ได้ง่ายขึ้น
 - ถ้าจะเปลี่ยนพอร์ต ให้เปลี่ยนทั้งค่า `PORT` และ mapping ทางฝั่ง `ports` ใน `docker-compose.yml`
 
+## Deploy ขึ้น Rancher
+
+มีไฟล์ Kubernetes manifests ให้แล้วในโฟลเดอร์ `deploy/rancher`
+
+- `deploy/rancher/deployment.yaml`
+- `deploy/rancher/service.yaml`
+- `deploy/rancher/ingress.yaml`
+
+ก่อน deploy ให้แก้ 2 จุดนี้ก่อน:
+
+1. เปลี่ยน image ใน `deployment.yaml`
+2. เปลี่ยนโดเมน `resume.example.com` ใน `ingress.yaml`
+
+ถ้าใช้ `kubectl`:
+
+```powershell
+kubectl apply -f deploy/rancher/deployment.yaml
+kubectl apply -f deploy/rancher/service.yaml
+kubectl apply -f deploy/rancher/ingress.yaml
+```
+
 ## รันแบบตรงด้วย Rust
 
 1. ติดตั้ง Rust จาก [rustup.rs](https://rustup.rs/)
