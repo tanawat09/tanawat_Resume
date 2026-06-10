@@ -1,0 +1,8 @@
+name: tanawat-resume
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "2535:80"
+    restart: unless-stopped
